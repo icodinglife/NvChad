@@ -2,11 +2,22 @@
 
 local M = {}
 
+local userPlugins = require "custom.plugins"
+
+local override = require "custom.plugins.override"
+
 -- make sure you maintain the structure of `core/default_config.lua` here,
 -- example of changing theme:
 
+M.plugins = {
+  override = {
+    ["kyazdani42/nvim-tree.lua"] = override.nvimtree,
+  },
+  user = userPlugins
+}
+
 M.ui = {
-   theme = "gruvchad",
+   -- theme = "gruvchad",
 }
 
 M.mappings = require "custom.mappings"

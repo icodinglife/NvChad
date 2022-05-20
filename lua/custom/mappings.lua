@@ -1,9 +1,18 @@
 local M = {}
 
+M.general = {
+  i = {
+
+  },
+  n = {
+
+  }
+}
+
 M.nvimtree = {
   n = {
     -- toggle
-    ["<A-t>"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" }
+    ["<C-t>"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" }
   }
 }
 
