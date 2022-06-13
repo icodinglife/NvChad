@@ -1,9 +1,7 @@
-local M = {}
-
-M.nvimtree = {
-  git = {
-    enable = true
+return {
+  ["kyazdani42/nvim-tree.lua"] = {
+    git = {
+      enable = true
+    }
   }
 }
-
-return M
