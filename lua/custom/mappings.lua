@@ -34,8 +34,30 @@ M.general = {
 
 M.telescope = {
   n = {
-    ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "find files" },
-    ["<C-F>"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "find files" },
+    ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
+  }
+}
+
+M.lspconfig = {
+  n = {
+    ["gh"] = {
+      function()
+        vim.lsp.buf.hover()
+      end,
+      "   lsp hover",
+    },
+    ["gc"] = {
+      function()
+         vim.lsp.buf.incoming_calls()
+      end,
+      "lsp call hierarchy"
+   },
+   ["gd"] = {"<cmd> Trouble lsp_definitions<CR>", "lsp definitions"},
+   ["gi"] = {"<cmd> Trouble lsp_implementations<CR>", "lsp implementations"},
+   ["gr"] = {"<cmd> Trouble lsp_references<CR>", "lsp references"},
+   ["<leader>rn"] = { "<cmd> Lspsaga rename<CR>", " lsp rename" },
   }
 }
 
